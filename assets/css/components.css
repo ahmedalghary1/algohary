@@ -310,9 +310,16 @@
 .timeline-item {
     position: relative;
     padding-bottom: var(--space-2xl);
-    opacity: 0;
-    transform: translateX(-20px);
+    opacity: 1;
+    /* Changed from 0 to make visible by default */
+    transform: translateX(0);
+    /* Changed from translateX(-20px) */
     transition: all var(--transition-slow);
+}
+
+/* Animation enhancement when visible class is added */
+.timeline-item:not(.visible) {
+    opacity: 0.7;
 }
 
 .timeline-item.visible {

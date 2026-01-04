@@ -23,26 +23,26 @@ window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', () => {
   // Smooth scroll for navigation links
   const navLinks = document.querySelectorAll('a[href^="#"]');
-  
+
   navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
-      
+
       // Skip if it's just #
       if (href === '#') return;
-      
+
       e.preventDefault();
       const target = document.querySelector(href);
-      
+
       if (target) {
         const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
         const targetPosition = target.offsetTop - navbarHeight;
-        
+
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
         });
-        
+
         // Close mobile menu if open
         const navbarCollapse = document.querySelector('.navbar-collapse');
         if (navbarCollapse && navbarCollapse.classList.contains('show')) {
@@ -62,14 +62,14 @@ const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
-  
+
   // Add scrolled class for background effect
   if (currentScroll > 50) {
     navbar?.classList.add('scrolled');
   } else {
     navbar?.classList.remove('scrolled');
   }
-  
+
   lastScroll = currentScroll;
 });
 
@@ -81,12 +81,12 @@ const navItems = document.querySelectorAll('.nav-link');
 
 function highlightNavigation() {
   const scrollY = window.pageYOffset;
-  
+
   sections.forEach(section => {
     const sectionHeight = section.offsetHeight;
     const sectionTop = section.offsetTop - 100;
     const sectionId = section.getAttribute('id');
-    
+
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       navItems.forEach(item => {
         item.classList.remove('active');
@@ -123,14 +123,11 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.addEventListener('DOMContentLoaded', () => {
   const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
   revealElements.forEach(el => revealObserver.observe(el));
-  
+
   // Timeline items
   const timelineItems = document.querySelectorAll('.timeline-item');
-  timelineItems.forEach(item => {
-    item.style.opacity = '0';
-    item.style.transform = 'translateX(-20px)';
-  });
-  
+
+  // Observer to add 'visible' class for animation enhancement
   const timelineObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -138,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, observerOptions);
-  
+
   timelineItems.forEach(item => timelineObserver.observe(item));
 });
 
@@ -199,7 +196,7 @@ function debounce(func, wait = 10) {
 // Throttle function for scroll events
 function throttle(func, limit = 100) {
   let inThrottle;
-  return function(...args) {
+  return function (...args) {
     if (!inThrottle) {
       func.apply(this, args);
       inThrottle = true;

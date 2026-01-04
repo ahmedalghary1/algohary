@@ -1,0 +1,457 @@
+/*
+ * ELITE PORTFOLIO - VISUAL ENHANCEMENTS
+ * Additional Premium Effects & Refinements
+ */
+
+/* ========================================
+   ENHANCED BACKGROUND EFFECTS
+   ======================================== */
+
+/* Animated gradient background for sections */
+.hero,
+#skills,
+#ai {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after,
+#skills::after,
+#ai::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle at center, rgba(0, 240, 255, 0.03) 0%, transparent 70%);
+    animation: rotateGradient 20s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes rotateGradient {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Make content above animated background */
+.hero-content,
+.container-custom {
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   ENHANCED PROJECT CARDS
+   ======================================== */
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow effect on hover */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 240, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+/* Image zoom effect */
+.project-image {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.08);
+}
+
+/* Shimmer effect on images */
+.project-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.1) 50%,
+            transparent 100%);
+    transition: left 0.7s;
+}
+
+.project-card:hover .project-image::after {
+    left: 200%;
+}
+
+/* Enhanced tech badges */
+.tech-badge {
+    transition: all var(--transition-base);
+    cursor: default;
+}
+
+.tech-badge:hover {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 240, 255, 0.3);
+}
+
+/* ========================================
+   ENHANCED SKILL CARDS
+   ======================================== */
+
+/* Premium gradient border effect */
+.skill-card {
+    position: relative;
+    background: var(--bg-glass);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-lg);
+    padding: 2px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.skill-card:hover::before {
+    opacity: 1;
+}
+
+/* Animated skill bar with pulse */
+.skill-bar-fill {
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.skill-card.animated .skill-bar-fill {
+    animation: skillPulse 2s ease-in-out infinite;
+}
+
+@keyframes skillPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+    }
+}
+
+/* ========================================
+   ENHANCED BUTTONS
+   ======================================== */
+
+/* Premium button with glow */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Outline button enhancement */
+.btn-outline {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-outline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: var(--accent-gradient);
+    transition: height var(--transition-base);
+    z-index: -1;
+}
+
+.btn-outline:hover::after {
+    height: 100%;
+}
+
+.btn-outline:hover {
+    color: var(--bg-primary);
+}
+
+/* ========================================
+   ENHANCED TIMELINE
+   ======================================== */
+
+/* Glowing timeline line */
+.timeline::before {
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+/* Enhanced timeline dots */
+.timeline-item::before {
+    animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 4px var(--bg-primary), 0 0 20px var(--accent-primary);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px var(--bg-primary), 0 0 30px var(--accent-primary);
+    }
+}
+
+/* ========================================
+   ENHANCED TEXT EFFECTS
+   ======================================== */
+
+/* Premium gradient text with animation */
+.text-gradient {
+    background: linear-gradient(135deg,
+            var(--accent-primary) 0%,
+            var(--accent-secondary) 50%,
+            var(--accent-primary) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s linear infinite;
+}
+
+/* Section titles enhancement */
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+}
+
+/* ========================================
+   ENHANCED CARD INTERACTIONS
+   ======================================== */
+
+/* About cards enhancement */
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(176, 0, 255, 0.05) 0%, transparent 70%);
+    transition: transform 0.8s;
+}
+
+.card:hover::after {
+    transform: translate(-25%, -25%);
+}
+
+/* ========================================
+   ENHANCED FORM
+   ======================================== */
+
+/* Form focus glow */
+.form-control-custom:focus {
+    box-shadow:
+        0 0 0 3px rgba(0, 240, 255, 0.1),
+        0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+/* Enhanced submit button */
+.contact-form button[type="submit"] {
+    background: var(--accent-gradient);
+    background-size: 200% auto;
+    transition: all var(--transition-base);
+}
+
+.contact-form button[type="submit"]:hover {
+    background-position: right center;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   ENHANCED SOCIAL LINKS
+   ======================================== */
+
+.social-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--accent-gradient);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s, height 0.4s;
+    z-index: -1;
+}
+
+.social-link:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.social-link:hover {
+    color: var(--bg-primary);
+    border-color: transparent;
+}
+
+/* ========================================
+   ENHANCED NAVBAR
+   ======================================== */
+
+/* Premium navbar with blur */
+.navbar {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar.scrolled {
+    box-shadow: 0 4px 30px rgba(0, 240, 255, 0.1);
+}
+
+/* Enhanced nav links */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--accent-gradient);
+    transition: width var(--transition-base);
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    width: 80%;
+}
+
+/* ========================================
+   ENHANCED SCROLL TOP BUTTON
+   ======================================== */
+
+.scroll-top {
+    animation: float 3s ease-in-out infinite;
+}
+
+.scroll-top:hover {
+    animation: none;
+}
+
+/* ========================================
+   PREMIUM LOADING SCREEN
+   ======================================== */
+
+.loading-spinner {
+    animation: spin 1s linear infinite, pulseGlow 2s ease-in-out infinite;
+}
+
+/* ========================================
+   RESPONSIVE ENHANCEMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* Reduce animation complexity on mobile for better performance */
+    .hero::after,
+    #skills::after,
+    #ai::after,
+    .particles {
+        display: none;
+    }
+
+    .project-card:hover .project-image {
+        transform: scale(1.03);
+        /* Smaller zoom on mobile */
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY: REDUCE MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero::after,
+    #skills::after,
+    #ai::after,
+    .text-gradient,
+    .skill-bar-fill,
+    .timeline-item::before,
+    .scroll-top {
+        animation: none !important;
+    }
+}
