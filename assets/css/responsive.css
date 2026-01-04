@@ -1,0 +1,344 @@
+/*
+ * ELITE PORTFOLIO - RESPONSIVE STYLES
+ * Mobile-First Breakpoints & Adaptive Layouts
+ */
+
+/* ========================================
+   BREAKPOINT SYSTEM
+   - xs: 320px (small phones)
+   - sm: 576px (phones)
+   - md: 768px (tablets)
+   - lg: 992px (laptops)
+   - xl: 1200px (desktops)
+   - xxl: 1400px (large desktops)
+   - 4k: 2560px (ultra-wide)
+   ======================================== */
+
+/* ========================================
+   EXTRA SMALL DEVICES (< 576px)
+   ======================================== */
+@media (max-width: 575.98px) {
+    :root {
+        --container-padding: 1rem;
+        --section-padding: clamp(3rem, 6vw, 5rem);
+    }
+
+    /* Hero Adjustments */
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero-content {
+        padding: 0 1rem;
+    }
+
+    .hero-title {
+        font-size: var(--text-3xl);
+    }
+
+    .hero-description {
+        font-size: var(--text-base);
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+    }
+
+    /* Section Headers */
+    .section-title {
+        font-size: var(--text-3xl);
+    }
+
+    .section-description {
+        font-size: var(--text-base);
+    }
+
+    /* Navigation */
+    .navbar-brand {
+        font-size: var(--text-lg);
+    }
+
+    .nav-link {
+        padding: 0.75rem 0 !important;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    /* Project Cards */
+    .project-image {
+        height: 200px;
+    }
+
+    .project-title {
+        font-size: var(--text-xl);
+    }
+
+    /* Timeline */
+    .timeline {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-item::before {
+        left: -1.95rem;
+    }
+
+    /* Contact Form */
+    .contact-form {
+        padding: 0;
+    }
+
+    /* Scroll Top Button */
+    .scroll-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Social Links */
+    .social-link {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* ========================================
+   SMALL DEVICES (≥ 576px)
+   ======================================== */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-title {
+        font-size: var(--text-4xl);
+    }
+
+    .project-image {
+        height: 220px;
+    }
+}
+
+/* ========================================
+   MEDIUM DEVICES (≥ 768px)
+   ======================================== */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .project-image {
+        height: 240px;
+    }
+
+    /* Timeline - 2 columns */
+    .timeline {
+        padding-left: 2rem;
+    }
+}
+
+/* ========================================
+   LARGE DEVICES (≥ 992px)
+   ======================================== */
+@media (min-width: 992px) {
+
+    /* Navbar - horizontal layout */
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+
+    .nav-link {
+        margin-left: 0.5rem;
+    }
+
+    /* Project Cards - better spacing */
+    .project-card {
+        margin-bottom: 0;
+    }
+
+    .project-image {
+        height: 250px;
+    }
+
+    /* Skills - Grid layout optimization */
+    .skill-card {
+        min-height: 180px;
+    }
+}
+
+/* ========================================
+   EXTRA LARGE DEVICES (≥ 1200px)
+   ======================================== */
+@media (min-width: 1200px) {
+    :root {
+        --container-max: 1400px;
+    }
+
+    .hero-content {
+        max-width: 1100px;
+    }
+
+    .project-image {
+        height: 280px;
+    }
+
+    /* Enhanced spacing for larger screens */
+    .section-header {
+        margin-bottom: 4rem;
+    }
+}
+
+/* ========================================
+   XXL DEVICES (≥ 1400px)
+   ======================================== */
+@media (min-width: 1400px) {
+    :root {
+        --container-max: 1600px;
+    }
+
+    .container-custom {
+        padding: 0 3rem;
+    }
+
+    .project-image {
+        height: 300px;
+    }
+}
+
+/* ========================================
+   4K & ULTRA-WIDE (≥ 2560px)
+   ======================================== */
+@media (min-width: 2560px) {
+    :root {
+        --container-max: 2200px;
+        --text-base: 1.25rem;
+    }
+
+    .hero-content {
+        max-width: 1400px;
+    }
+
+    .project-image {
+        height: 400px;
+    }
+
+    .skill-card {
+        min-height: 220px;
+    }
+}
+
+/* ========================================
+   TOUCH DEVICE OPTIMIZATIONS
+   ======================================== */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Increase touch targets for mobile */
+    .btn {
+        padding: 1rem 2rem;
+        min-height: 48px;
+    }
+
+    .nav-link {
+        min-height: 48px;
+    }
+
+    .social-link {
+        width: 52px;
+        height: 52px;
+    }
+
+    /* Disable hover effects on touch devices */
+    .card:hover,
+    .project-card:hover,
+    .skill-card:hover {
+        transform: none;
+    }
+
+    /* Make clickable areas larger */
+    .project-link {
+        padding: 0.5rem 0;
+    }
+}
+
+/* ========================================
+   LANDSCAPE ORIENTATION (Mobile)
+   ======================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 4rem 0;
+    }
+
+    .section-padding {
+        padding: 3rem 0;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+@media print {
+
+    .navbar,
+    .scroll-top,
+    .loading-screen,
+    .hero-background {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .hero,
+    section {
+        page-break-inside: avoid;
+    }
+}
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ========================================
+   HIGH CONTRAST MODE
+   ======================================== */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: rgba(255, 255, 255, 0.3);
+        --text-secondary: #e0e0e0;
+    }
+
+    .card,
+    .skill-card,
+    .project-card {
+        border-width: 2px;
+    }
+}
+
+/* ========================================
+   DARK MODE SUPPORT (System Preference)
+   ======================================== */
+@media (prefers-color-scheme: light) {
+    /* Already dark by default, but provide override if needed */
+    /* This portfolio is intentionally dark-themed */
+}

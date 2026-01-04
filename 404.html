@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>404 - Page Not Found | Ahmed Algohary</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 30% 40%, rgba(0, 240, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(176, 0, 255, 0.06) 0%, transparent 50%);
+        }
+
+        .error-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+        }
+
+        .error-code {
+            font-size: clamp(6rem, 15vw, 12rem);
+            font-family: var(--font-display);
+            font-weight: 900;
+            line-height: 1;
+            background: var(--text-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+
+        .error-title {
+            font-size: var(--text-3xl);
+            font-family: var(--font-display);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .error-message {
+            font-size: var(--text-lg);
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .error-icon {
+            font-size: 4rem;
+            color: var(--accent-primary);
+            margin-bottom: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="error-page">
+        <div class="error-background"></div>
+
+        <div class="error-content">
+            <div class="error-icon">
+                <i class="bi bi-exclamation-triangle"></i>
+            </div>
+
+            <h1 class="error-code">404</h1>
+
+            <h2 class="error-title">Page Not Found</h2>
+
+            <p class="error-message">
+                The page you're looking for has been moved, deleted, or possibly never existed.
+                Even the best-engineered systems encounter the occasional 404.
+            </p>
+
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="index.html" class="btn btn-primary btn-ripple">
+                    <i class="bi bi-house"></i> Back to Home
+                </a>
+                <a href="index.html#contact" class="btn btn-outline btn-ripple">
+                    <i class="bi bi-envelope"></i> Contact Me
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add ripple effect to buttons
+        document.querySelectorAll('.btn-ripple').forEach(button => {
+            button.addEventListener('click', function (e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const ripple = document.createElement('span');
+                ripple.style.cssText = `
+          position: absolute;
+          left: ${x}px;
+          top: ${y}px;
+          width: 0;
+          height: 0;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.5);
+          transform: translate(-50%, -50%);
+          animation: ripple 0.6s ease-out;
+          pointer-events: none;
+        `;
+
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

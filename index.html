@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Ahmed Algohary - Elite Full-Stack Engineer, Backend Architect & Generative AI Specialist. Engineering scalable, production-grade digital systems with precision and innovation.">
+    <meta name="keywords"
+        content="Full-Stack Engineer, Backend Development, Frontend Development, Python, Django, Flask, FastAPI, Generative AI, LLM, Machine Learning, Ahmed Algohary">
+    <meta name="author" content="Ahmed Algohary">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ahmed Algohary - Elite Full-Stack Engineer">
+    <meta property="og:description"
+        content="Engineering scalable digital systems with precision. Backend Architecture • Frontend Excellence • Generative AI">
+    <meta property="og:url" content="https://ahmedalgohary.dev">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ahmed Algohary - Elite Full-Stack Engineer">
+    <meta name="twitter:description" content="Engineering scalable digital systems with precision">
+
+    <title>Ahmed Algohary - Elite Full-Stack Engineer & AI Architect</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+       LOADING SCREEN
+       ======================================== -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">INITIALIZING</div>
+    </div>
+
+    <!-- ========================================
+       NAVIGATION
+       ======================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-custom">
+            <a class="navbar-brand" href="#hero">ALGOHARY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ai">Generative AI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+       HERO SECTION
+       ======================================== -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="hero-mesh"></div>
+            <div class="hero-grid"></div>
+            <canvas id="particleCanvas"
+                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></canvas>
+        </div>
+
+        <div class="hero-content">
+            <p class="hero-subtitle">ELITE FULL-STACK ENGINEER</p>
+            <h1 class="hero-title">
+                Ahmed Algohary<br>
+                <span class="text-gradient">Engineering Scalable Digital Systems</span>
+            </h1>
+            <p class="hero-description">
+                Crafting production-grade solutions with precision. Backend architecture, frontend excellence, and
+                cutting-edge generative AI systems engineered for scale.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary btn-ripple">View Projects</a>
+                <a href="#contact" class="btn btn-outline btn-ripple">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       ABOUT SECTION
+       ======================================== -->
+    <section id="about" class="section-padding">
+        <div class="container-custom">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="section-header">
+                        <p class="section-label">ABOUT ME</p>
+                        <h2 class="section-title reveal">Building Systems That Scale</h2>
+                        <p class="section-description reveal">
+                            I'm Ahmed Algohary, an elite full-stack engineer specializing in backend architecture,
+                            modern frontend development, and generative AI systems. With a systems thinking approach,
+                            I engineer scalable, high-performance solutions that solve complex problems with precision
+                            and elegance.
+                        </p>
+                    </div>
+
+                    <div class="row mt-5 reveal">
+                        <div class="col-md-4 mb-4">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-server"
+                                        style="font-size: 3rem; color: var(--accent-primary); margin-bottom: 1rem;"></i>
+                                    <h4>Backend Architect</h4>
+                                    <p class="text-secondary">Building robust, scalable systems with Python, Django,
+                                        Flask, and FastAPI. Expert in REST APIs, authentication, and database
+                                        optimization.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-code-slash"
+                                        style="font-size: 3rem; color: var(--accent-primary); margin-bottom: 1rem;"></i>
+                                    <h4>Frontend Specialist</h4>
+                                    <p class="text-secondary">Crafting pixel-perfect, responsive interfaces with modern
+                                        HTML5, CSS3, JavaScript, and Bootstrap. Performance-optimized and accessible.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <i class="bi bi-cpu"
+                                        style="font-size: 3rem; color: var(--accent-primary); margin-bottom: 1rem;"></i>
+                                    <h4>AI Engineer</h4>
+                                    <p class="text-secondary">Developing intelligent systems with LLMs, LangChain, and
+                                        AI agents. Transforming complex workflows into automated, intelligent solutions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       SKILLS SECTION
+       ======================================== -->
+    <section id="skills" class="section-padding" style="background: var(--bg-secondary);">
+        <div class="container-custom">
+            <div class="section-header">
+                <p class="section-label">TECHNICAL ARSENAL</p>
+                <h2 class="section-title reveal">Engineered Stack</h2>
+                <p class="section-description reveal">
+                    Production-grade technologies mastered through years of building scalable systems
+                </p>
+            </div>
+
+            <!-- Backend Skills -->
+            <div class="skill-category reveal">
+                <h3 class="skill-category-title">
+                    <span class="skill-category-icon"><i class="bi bi-server"></i></span>
+                    Backend Engineering
+                </h3>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-card" style="--skill-width: 95%;">
+                            <div class="skill-name">Python</div>
+                            <div class="skill-level">Expert</div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-card" style="--skill-width: 90%;">
+                            <div class="skill-name">Django</div>
+                            <div class="skill-level">Advanced</div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-card" style="--skill-width: 88%;">
+                            <div class="skill-name">Flask & FastAPI</div>
+                            <div class="skill-level">Advanced</div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-card" style="--skill-width: 85%;">
+                            <div class="skill-name">REST APIs</div>
+                            <div class="skill-level">Advanced</div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frontend Skills -->
+            <div class="skill-category reveal">
+                <h3 class="skill-category-title">
+                    <span class="skill-category-icon"><i class="bi bi-palette"></i></span>
+                    Frontend Development
+                </h3>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-card" style="--skill-width: 92%;">
+                            <div class="skill-name">HTML5 & CSS3</div>
+                            <div class="skill-level">Expert</div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-card" style="--skill-width: 90%;">
+                            <div class="skill-name">JavaScript ES6+</div>
+                            <div class="skill-level">Advanced</div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-card" style="--skill-width: 87%;">
+                            <div class="skill-name">Bootstrap 5</div>
+                            <div class="skill-level">Advanced</div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-card" style="--skill-width: 85%;">
+                            <div class="skill-name">Responsive Design</div>
+                            <div class="skill-level">Advanced</div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI/ML Skills -->
+            <div class="skill-category reveal">
+                <h3 class="skill-category-title">
+                    <span class="skill-category-icon"><i class="bi bi-robot"></i></span>
+                    Generative AI & Machine Learning
+                </h3>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-card" style="--skill-width: 88%;">
+                            <div class="skill-name">LLMs & GPT</div>
+                            <div class="skill-level">Advanced</div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-card" style="--skill-width: 85%;">
+                            <div class="skill-name">LangChain</div>
+                            <div class="skill-level">Advanced</div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-card" style="--skill-width: 82%;">
+                            <div class="skill-name">AI Agents</div>
+                            <div class="skill-level">Intermediate</div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="skill-card" style="--skill-width: 80%;">
+                            <div class="skill-name">Prompt Engineering</div>
+                            <div class="skill-level">Intermediate</div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       PROJECTS SECTION
+       ======================================== -->
+    <section id="projects" class="section-padding">
+        <div class="container-custom">
+            <div class="section-header">
+                <p class="section-label">PORTFOLIO</p>
+                <h2 class="section-title reveal">Production-Grade Projects</h2>
+                <p class="section-description reveal">
+                    Real-world solutions engineered for scale, performance, and reliability
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card reveal">
+                        <img src="assets/images/projects/project1.jpg" alt="E-Commerce Platform" class="project-image"
+                            loading="lazy">
+                        <div class="project-content">
+                            <p class="project-category">Backend • Full-Stack</p>
+                            <h3 class="project-title">Scalable E-Commerce Platform</h3>
+                            <p class="project-description">
+                                Built a high-performance e-commerce platform handling 10K+ daily transactions. Features
+                                include real-time inventory, secure payment processing, and RESTful APIs.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Django</span>
+                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">Redis</span>
+                            </div>
+                            <a href="#" class="project-link">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card reveal">
+                        <img src="assets/images/projects/project2.jpg" alt="API Gateway" class="project-image"
+                            loading="lazy">
+                        <div class="project-content">
+                            <p class="project-category">Backend • Microservices</p>
+                            <h3 class="project-title">Enterprise API Gateway</h3>
+                            <p class="project-description">
+                                Architected a robust API gateway servicing 50+ microservices. Implemented rate limiting,
+                                authentication, and request routing with 99.9% uptime.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-badge">FastAPI</span>
+                                <span class="tech-badge">Redis</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">JWT</span>
+                            </div>
+                            <a href="#" class="project-link">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card reveal">
+                        <img src="assets/images/projects/project3.jpg" alt="Real-time Dashboard" class="project-image"
+                            loading="lazy">
+                        <div class="project-content">
+                            <p class="project-category">Full-Stack • Real-time</p>
+                            <h3 class="project-title">Real-Time Analytics Dashboard</h3>
+                            <p class="project-description">
+                                Created a real-time analytics dashboard processing millions of events daily. WebSocket
+                                integration for live data streaming and responsive visualizations.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Flask</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">WebSocket</span>
+                                <span class="tech-badge">Chart.js</span>
+                            </div>
+                            <a href="#" class="project-link">
+                                View Details <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       GENERATIVE AI SECTION
+       ======================================== -->
+    <section id="ai" class="section-padding" style="background: var(--bg-secondary);">
+        <div class="container-custom">
+            <div class="section-header">
+                <p class="section-label">INTELLIGENT SYSTEMS</p>
+                <h2 class="section-title reveal">Generative AI & LLM Projects</h2>
+                <p class="section-description reveal">
+                    Cutting-edge AI systems leveraging LLMs, agents, and intelligent automation
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- AI Project 1 -->
+                <div class="col-lg-6">
+                    <div class="card reveal">
+                        <div class="card-body">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                                <div
+                                    style="width: 60px; height: 60px; background: var(--accent-gradient); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-chat-dots" style="font-size: 2rem; color: white;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0; color: var(--text-primary);">Intelligent Document Assistant
+                                    </h4>
+                                    <p style="margin: 0; color: var(--text-muted); font-size: var(--text-sm);">LangChain
+                                        • GPT-4 • Vector DB</p>
+                                </div>
+                            </div>
+                            <p class="text-secondary">
+                                Developed an AI-powered document analysis system using LangChain and GPT-4. Processes
+                                complex documents, extracts insights, and provides intelligent Q&A capabilities with
+                                retrieval-augmented generation (RAG).
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-badge">LangChain</span>
+                                <span class="tech-badge">OpenAI</span>
+                                <span class="tech-badge">Pinecone</span>
+                                <span class="tech-badge">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Project 2 -->
+                <div class="col-lg-6">
+                    <div class="card reveal">
+                        <div class="card-body">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                                <div
+                                    style="width: 60px; height: 60px; background: var(--accent-gradient); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-robot" style="font-size: 2rem; color: white;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0; color: var(--text-primary);">Multi-Agent Workflow System</h4>
+                                    <p style="margin: 0; color: var(--text-muted); font-size: var(--text-sm);">AI Agents
+                                        • Automation</p>
+                                </div>
+                            </div>
+                            <p class="text-secondary">
+                                Architected a multi-agent system for automated content generation and workflow
+                                management. Agents collaborate to research, write, and optimize content with human-level
+                                quality and efficiency.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-badge">LangGraph</span>
+                                <span class="tech-badge">GPT-4</span>
+                                <span class="tech-badge">FastAPI</span>
+                                <span class="tech-badge">Redis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Project 3 -->
+                <div class="col-lg-6">
+                    <div class="card reveal">
+                        <div class="card-body">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                                <div
+                                    style="width: 60px; height: 60px; background: var(--accent-gradient); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-code-square" style="font-size: 2rem; color: white;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0; color: var(--text-primary);">AI Code Review Assistant</h4>
+                                    <p style="margin: 0; color: var(--text-muted); font-size: var(--text-sm);">Code
+                                        Analysis • LLM</p>
+                                </div>
+                            </div>
+                            <p class="text-secondary">
+                                Created an intelligent code review system that analyzes pull requests, identifies
+                                issues, suggests improvements, and ensures code quality standards using fine-tuned LLMs.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-badge">OpenAI</span>
+                                <span class="tech-badge">GitHub API</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">Flask</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Project 4 -->
+                <div class="col-lg-6">
+                    <div class="card reveal">
+                        <div class="card-body">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                                <div
+                                    style="width: 60px; height: 60px; background: var(--accent-gradient); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-graph-up" style="font-size: 2rem; color: white;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0; color: var(--text-primary);">Predictive Analytics Engine</h4>
+                                    <p style="margin: 0; color: var(--text-muted); font-size: var(--text-sm);">ML • Time
+                                        Series</p>
+                                </div>
+                            </div>
+                            <p class="text-secondary">
+                                Built a predictive analytics engine leveraging machine learning to forecast business
+                                metrics. Integrates with existing data pipelines and provides actionable insights
+                                through intelligent analysis.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-badge">TensorFlow</span>
+                                <span class="tech-badge">Pandas</span>
+                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       EXPERIENCE SECTION
+       ======================================== -->
+    <section id="experience" class="section-padding">
+        <div class="container-custom">
+            <div class="section-header">
+                <p class="section-label">CAREER PATH</p>
+                <h2 class="section-title reveal">Professional Experience</h2>
+                <p class="section-description reveal">
+                    Building exceptional systems and leading technical initiatives
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="timeline">
+                        <!-- Experience 1 -->
+                        <div class="timeline-item">
+                            <p class="timeline-date">2022 - Present</p>
+                            <h4 class="timeline-title">Senior Full-Stack Engineer</h4>
+                            <p class="timeline-company">Tech Innovations Inc.</p>
+                            <p class="timeline-description">
+                                Leading development of enterprise-scale applications serving 100K+ users. Architected
+                                microservices infrastructure, implemented CI/CD pipelines, and mentored junior
+                                developers in best practices.
+                            </p>
+                        </div>
+
+                        <!-- Experience 2 -->
+                        <div class="timeline-item">
+                            <p class="timeline-date">2021 - 2022</p>
+                            <h4 class="timeline-title">Backend Developer</h4>
+                            <p class="timeline-company">Digital Solutions Co.</p>
+                            <p class="timeline-description">
+                                Developed RESTful APIs and database architectures for multiple client projects.
+                                Optimized query performance, reducing response times by 60%. Integrated third-party
+                                services and payment gateways.
+                            </p>
+                        </div>
+
+                        <!-- Experience 3 -->
+                        <div class="timeline-item">
+                            <p class="timeline-date">2020 - 2021</p>
+                            <h4 class="timeline-title">Junior Full-Stack Developer</h4>
+                            <p class="timeline-company">StartupHub</p>
+                            <p class="timeline-description">
+                                Built responsive web applications using modern frameworks. Collaborated with
+                                cross-functional teams to deliver features on schedule. Participated in code reviews and
+                                agile development processes.
+                            </p>
+                        </div>
+
+                        <!-- Experience 4 -->
+                        <div class="timeline-item">
+                            <p class="timeline-date">2019 - 2020</p>
+                            <h4 class="timeline-title">Freelance Developer</h4>
+                            <p class="timeline-company">Independent</p>
+                            <p class="timeline-description">
+                                Delivered custom web solutions for small businesses and startups. Managed full project
+                                lifecycle from requirements gathering to deployment. Built portfolio of successful
+                                projects across various industries.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       CONTACT SECTION
+       ======================================== -->
+    <section id="contact" class="section-padding" style="background: var(--bg-secondary);">
+        <div class="container-custom">
+            <div class="section-header">
+                <p class="section-label">GET IN TOUCH</p>
+                <h2 class="section-title reveal">Let's Build Something Extraordinary</h2>
+                <p class="section-description reveal">
+                    Have a project in mind? Let's engineer the future together.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <form id="contactForm" class="contact-form reveal">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control-custom" required
+                                placeholder="Your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control-custom" required
+                                placeholder="your.email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control-custom" required
+                                placeholder="Project inquiry">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control-custom" required
+                                placeholder="Tell me about your project..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-ripple" style="width: 100%;">
+                            Send Message <i class="bi bi-send"></i>
+                        </button>
+                    </form>
+
+                    <div class="social-links mt-5 reveal">
+                        <a href="https://github.com/ahmedalgohary" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/ahmedalgohary" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/ahmedalgohary" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="Twitter">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="mailto:contact@ahmedalgohary.dev" class="social-link" aria-label="Email">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       FOOTER
+       ======================================== -->
+    <footer style="background: var(--bg-primary); padding: 3rem 0; border-top: 1px solid var(--border-color);">
+        <div class="container-custom">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p style="color: var(--text-muted); margin: 0;">
+                        &copy; 2026 Ahmed Algohary. Engineered with <span
+                            style="color: var(--accent-primary);">precision</span> and <span
+                            style="color: var(--accent-secondary);">passion</span>.
+                    </p>
+                    <p style="color: var(--text-muted); margin-top: 0.5rem; font-size: var(--text-sm);">
+                        Built with HTML5, Bootstrap 5, and Vanilla JavaScript
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================
+       SCROLL TO TOP BUTTON
+       ======================================== -->
+    <div class="scroll-top" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </div>
+
+    <!-- ========================================
+       SCRIPTS
+       ======================================== -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/form.js"></script>
+
+</body>
+
+</html>
